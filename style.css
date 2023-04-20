@@ -1,0 +1,321 @@
+/*
+Theme Name: Injeer
+Theme URI:
+Description: btn fix, form activate//
+Author: Alex
+Author URI:
+Version: 2.8.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom, theme, WordPress
+*/
+body{
+    background: whitesmoke;
+}
+@media(orientation: landscape){
+div.container-fluid{
+    height:115vh;
+    padding-left: 0;
+}
+div.nav-container{
+    position:absolute;
+    top:0;
+    padding-top:0.4%;
+    padding-left:0.7%;
+    height:6%;
+    background: whitesmoke;
+    width:100%;
+}
+a.brand{
+    color: rgba(109, 109, 109, 0.932);
+    font-size:2.6vh;
+    position: sticky;
+}
+a.brand:hover{
+    color:rgba(255, 156, 8, 0.801);
+    text-decoration: none;
+}
+a.brand:active{
+    color: #b47413;
+}
+button.btn-f{
+    border: solid 0.2vw rgba(161, 161, 161, 0.932);
+    text-align: center;
+    color:rgba(161, 161, 161, 0.932);
+    font-size: 1.7vh;
+    width: fit-content;
+    height:;
+    float:right;
+}
+button.btn-f:hover{
+    border: solid 0.2vw rgba(255, 156, 8, 0.801);
+    color:rgba(255, 156, 8, 0.801);
+}
+div.POOL{
+    background: #4d0415;
+    height:24%;
+    max-width:100%;
+}
+div.PIRA{
+    background: #187878;
+    height:0%;
+    max-width:100%;
+}
+div.carousel{
+    max-width: 100vw;
+    margin-right: -0.9%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    height: 30px; /* изменение высоты кнопок */
+    margin-top:32vh;
+}
+div.billText{
+    width:40%;
+    margin-left: 2%;
+    margin-top: 4%;
+}
+div.bottom{
+    position: absolute;
+    bottom: -5%;
+    height:1vh;
+}
+button.btn-pool{
+    position: absolute;
+    z-index: 5;
+    color:whitesmoke;
+    font-weight: 600;
+    letter-spacing: 0.03vw;
+    background: #960c4c;
+    border-radius: 0.3vw;
+    height:7.5%;
+    text-align: center;
+    font-size: 1.1vw;
+    width:12%;
+    box-shadow: 0px 0.3vw 0.3vw -0.1vw rgba(0, 0, 0, 0.274);
+    bottom: 10%;
+}
+button.btn-pool:hover{
+    background: #4d0415;
+    color:rgb(197, 197, 197);
+}
+button.btn-pool:active{
+    background: #2b020c;
+    color:rgb(197, 197, 197);
+}
+button.btn-pool:focus{
+    background: #4d0415;
+    color:rgb(197, 197, 197);
+}
+button.btn-piramid{
+    position: absolute;
+    z-index: 5;
+    color:whitesmoke;
+    font-weight: 600;
+    letter-spacing: 0.03vw;
+    background: #18b999;
+    border-radius: 0.3vw;
+    height:7.5%;
+    text-align: center;
+    font-size: 1.1vw;
+    width:12%;
+    box-shadow: 0px 0.3vw 0.3vw -0.1vw rgba(0, 0, 0, 0.274);
+    bottom: 10%;
+}
+button.btn-piramid:hover{
+    background: #187878;
+    color:rgb(197, 197, 197);
+    outline: 0;
+}
+button.btn-piramid:active{
+    background: #095046;
+    color:rgb(197, 197, 197);
+    outline: 0;
+    box-shadow: 0;
+}
+button.btn-piramid:focus{
+    background: #187878;
+    color:rgb(197, 197, 197);
+    outline: 0;
+    box-shadow: 0;
+}
+div.container-fluid{
+    /*-webkit-filter: saturate(0%) grayscale(100%) brightness(9%) contrast(10%);*/
+}
+div.time1, .date1 {
+    display: inline-block;
+    margin-right: 2%;
+    vertical-align: top;
+  }
+div.time1{
+    margin-right: 0%;
+}
+::-webkit-scrollbar {
+    width: 10px; /* ширина индикатора */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color:  #b9b9b9;/* цвет индикатора */
+  }
+form.booking{
+    position: fixed;
+    margin:0 auto;
+    z-index: -2;
+    width:0%;
+    height:0%; 
+    background: rgb(241, 224, 189);
+    background: radial-gradient(circle, rgba(235,220,191,1) 0%, rgba(86,214,163,1) 0%, rgba(71,144,121,1) 100%);
+    padding: 1%;
+    margin-left: 24%;
+    top: 15%;
+    border-radius: 2%;
+    padding:4%;
+    visibility: hidden;
+ }
+label.tab-pool{
+    border:solid 0.6vh rgba(5, 85, 18, 0.329); 
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(27,205,104,0) 49%, rgba(5, 85, 18, 0.329) 100%);
+    margin-right: 3%;
+}
+label.tab-pira{
+    border:solid 0.6vh rgba(5, 85, 18, 0.329); 
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(27,205,104,0) 49%, rgba(5, 85, 18, 0.329) 100%);
+}
+select.form-control{
+    background: rgba(5, 85, 18, 0.329);
+    height:5vh;
+    font-size: 1.8vh;
+    color:rgb(215, 250, 236);
+    border: 0;
+}
+select.form-control:hover{
+    background: rgba(3, 56, 12, 0.377);
+}
+select.form-control:active{
+    outline: none;
+    background: rgba(12, 82, 23, 0.377);
+}
+select.form-control:focus{
+    outline: none;
+    background: rgba(12, 82, 23, 0.377);
+}
+input.form-control{
+    background: rgba(5, 85, 18, 0.329);
+    height:5vh;
+    font-size: 1.8vh;
+    color:rgb(215, 250, 236);
+    border: 0;
+}
+input.form-control:hover{
+    background: rgba(3, 56, 12, 0.377);
+}
+input.form-control:active{
+    outline: none;
+    background: rgba(12, 82, 23, 0.377);
+}
+input.form-control:focus{
+    outline: none;
+    background: rgba(12, 82, 23, 0.377);
+}
+div.form-group{
+    width: 100%;
+    background: 0;
+}
+div.input-group{
+    width:100%;
+    background: 0;
+}
+label.btn-custom:hover{
+    background: radial-gradient(circle, rgba(17, 97, 17, 0.253) 0%, rgba(23, 124, 20, 0.356) 40%, rgba(3, 56, 12, 0.377));
+}
+button.btn-close{
+    color:rgb(227, 255, 208);
+    width:fit-content;
+    background: rgba(12, 0, 0, 0);
+}
+div.back{
+    background: rgba(19, 71, 15, 0.438);
+    border-radius: 3%; 
+    width:93%; 
+    height:auto; 
+    position: absolute; 
+    z-index: -1; 
+    bottom:4%;
+    left:3.5%;
+    top:4%;
+}
+input.btn-val{
+    margin-left: 30%;
+    margin-top: 2%;
+    width:40%;
+    height:5vh;
+    font-size: 1.8vh;
+    background: rgba(5, 85, 18, 0.329);
+    border: none;
+}
+input.btn-val:hover{
+    background: rgba(3, 56, 12, 0.377);
+    border: none;
+}
+input.btn-val:active{
+    outline: none;
+    background: rgba(12, 82, 23, 0.377);
+}
+input.btn-val:focus{
+    outline: none;
+    background: rgba(12, 82, 23, 0.377);
+}
+p.h2{
+    font-size: 3vh;
+    color:rgb(215, 250, 236);
+}
+img.image-pira{
+    display: block;
+    height: 70.2vh; 
+    margin: auto; 
+    margin-top: -5vh;
+}
+img.image-pool{
+    display: block; 
+    height: 65vh; 
+    margin: auto;
+}
+img.ch.pool{
+    margin-left: -36%; 
+    margin-top: 4%;
+    height:0%;
+}
+img.ch.pira{
+    position:absolute; 
+    margin-left: -55%;
+    margin-top: 4%;
+}
+div.billText{
+    float:left; 
+    margin-left: 6%; 
+    text-align: justify;
+}
+div.sideText{
+    float:right; 
+    width:35%; 
+    margin-right: 3%;
+}
+img.ball{
+    margin-top:6%; 
+    margin-left: -5%;
+    width:30%;
+}
+h6._text{
+    color:#757575; 
+    margin-top: -8%; 
+    text-align: left; 
+    column-count: 2;
+}
+div.btn-group{
+    width:100%; 
+    height:30%; 
+    margin-right: 1%;
+}
+}

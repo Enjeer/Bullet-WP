@@ -77,19 +77,19 @@
       </label>
     </div> 
   <div class="DT" style="margin-top: 1.3%;">
-    <div class="form-group date1">
+    <div class="form-group date1"  style="width:48.6%; position:relative;">
       <input type="date" id="date" class="form-control">
     </div>
-    <div class="form-group time1">
+    <div class="form-group time1"  style="width:48.6%;">
         <select class="form-control custom-select" id="customSelect-time">
           <option selected value="none" id="time"></option>
-          <option value="19:00" id="T1"></option>
-          <option value="20:00" id="T2"></option>
-          <option value="21:00" id="T3"></option>
-          <option value="22:00" id="T4"></option>
-          <option value="23:00" id="T5"></option>
-          <option value="00:00" id="T6"></option>
-          <option value="01:00" id="T7"></option>
+          <option value="1" id="T1"></option>
+          <option value="2" id="T2"></option>
+          <option value="3" id="T3"></option>
+          <option value="4" id="T4"></option>
+          <option value="5" id="T5"></option>
+          <option value="6" id="T6"></option>
+          <option value="7" id="T7"></option>
         </select>
     </div>
   </div>
@@ -110,5 +110,25 @@
 </form>
 </div>
     <?php wp_footer(); ?>
+    <script>
+  var myCarousel = new bootstrap.Carousel(carousel, {
+});
+var butnPol=document.getElementById("butnP"),
+    butnPir=document.getElementById("btn-pir");
+
+clicked=()=>{
+  document.querySelector("div.container-fluid").style="-webkit-filter: saturate(0%) grayscale(100%) brightness(9%) contrast(10%);";
+
+  document.querySelector("form").style="width: 70%; height:70%; z-index:6; visibility: visible;"
+}
+
+butnPol.onclick=()=>{
+  clicked();
+};
+butnPir.onclick=()=>{
+  clicked();
+};
+
+</script>
 </body>
 </html>

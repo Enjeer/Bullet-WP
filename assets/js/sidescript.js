@@ -60,13 +60,19 @@ function unfade(side) {
 }
 //---------------------------------------------------
 //ONCLICK--------------------------------------------
-var butnPol=document.getElementById("butnP"),
-    butnPir=document.getElementById("btn-pir");
+
+
+function setTable(table) {
+    document.getElementById('table_choice').innerHTML = table;
+  }
+
+  var butnPol=document.getElementById("btnpool"),
+    butnPir=document.getElementById("btnpira");
 
 clicked=()=>{
   document.querySelector("div.container-fluid").style="-webkit-filter: saturate(0%) grayscale(100%) brightness(9%) contrast(10%);";
 
-  document.querySelector("form").style="width: 70%; height:70%; z-index:6; visibility: visible;"
+  document.querySelector("form").style="width: 52%; height:70%; z-index:6; visibility: visible;"
 }
 
 butnPol.onclick=()=>{
@@ -75,12 +81,6 @@ butnPol.onclick=()=>{
 butnPir.onclick=()=>{
   clicked();
 };
-
-
-
-function setTable(table) {
-    document.getElementById('table_choice').innerHTML = table;
-  }
 
 //---------------------------------------------------
 

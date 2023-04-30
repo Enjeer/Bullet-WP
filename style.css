@@ -1,10 +1,10 @@
 /*
 Theme Name: Injeer
 Theme URI:
-Description: btn fix, form activate//
+Description: checker fix; airt/.php
 Author: Alex
 Author URI:
-Version: 2.8.5
+Version: 3.6.2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom, theme, WordPress
@@ -222,6 +222,13 @@ input.form-control:focus{
 div.form-group{
     width: 100%;
     background: 0;
+}
+div.time1{
+    width:48.4%;
+}
+div.date1{
+    width:48.4%; 
+    position:relative;
 }
 div.input-group{
     width:100%;

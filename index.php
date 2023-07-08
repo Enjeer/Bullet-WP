@@ -57,7 +57,7 @@
   <div class="bottom"><hr style="background: rgba(0, 0, 0, 0.151); width: 99vw; margin-left: -1vw; margin-top: 3%; height:0.1vh;"></div>
 </div> 
 <div class="form-cont">
-<form class="booking" id="FORMM" onsubmit="alert('gay'); function(e){e.preventDefault(); submitHandler();}" >
+<form class="booking" id="FORMM" onsubmit=" function(e){e.preventDefault(); submitHandler();} alert('p1');" >
 <div class="close">
    <input type="button" class="btn btn-close" id="close"></input>
 </div>

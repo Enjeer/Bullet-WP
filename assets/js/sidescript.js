@@ -70,9 +70,10 @@ function setTable(table) {
     butnPir=document.getElementById("btnpira");
 
 clicked=()=>{
-  document.querySelector("div.container-fluid").style="-webkit-filter: saturate(0%) grayscale(100%) brightness(9%) contrast(10%);";
+  document.querySelector("div.container-fluid").style="-webkit-filter: saturate(00%) grayscale(100%) brightness(9%) contrast(10%);";
 
-  document.querySelector("form").style="width: 52%; height:70%; z-index:6; visibility: visible;"
+  document.querySelector("form").style="width: 46%; height:70%; z-index:6; visibility: visible;"
+  document.getElementById('close').style="z-index:7;"
 }
 
 butnPol.onclick=()=>{
@@ -81,6 +82,21 @@ butnPol.onclick=()=>{
 butnPir.onclick=()=>{
   clicked();
 };
+
+//---------------------------------------------------
+
+//close butn-----------------------------------------
+
+var closeButn=document.getElementById('close');
+
+closeButn.addEventListener('click', function(){
+  
+          document.querySelector("div.container-fluid").style="-webkit-filter: saturate(100%) grayscale(0%) brightness(100%) contrast(100%);";
+
+          document.querySelector("form").style="width: 0%; height:0%; z-index:-1; visibility: hidden;"
+          document.getElementById('close').style="z-index:-1;"
+
+});
 
 //---------------------------------------------------
 
@@ -182,18 +198,16 @@ nextButton.addEventListener('click', function() {
 //---------------------------toggler
 document.getElementById("pool").addEventListener('click', function(){
   if(document.getElementById("pool").checked==true){
-  document.getElementById("poolLab").style=`    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(15, 168, 35, 0.336) 0%, rgba(10, 126, 29, 0.411) 49%, rgba(3, 63, 13, 0.452) 100%);`
-  document.getElementById("piraLab").style=`background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(27,205,104,0) 49%, rgba(5, 85, 18, 0.329) 100%);`
+  document.getElementById("poolLab").style=`#4a515e;
+  background: radial-gradient(circle, rgba(223,223,223,0) 45%, rgba(214,90,49,0.6587009803921569) 100%);`
+  document.getElementById("piraLab").style=`background: #4a515e;`
  }
  });
  document.getElementById("piramid").addEventListener('click', function(){
   if(document.getElementById("piramid").checked==true){
-  document.getElementById("piraLab").style=`    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(15, 168, 35, 0.336) 0%, rgba(10, 126, 29, 0.411) 49%, rgba(3, 63, 13, 0.452) 100%);`
-  document.getElementById("poolLab").style=`background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(27,205,104,0) 49%, rgba(5, 85, 18, 0.329) 100%);`
+  document.getElementById("piraLab").style=`background: rgb(223,223,223);
+  background: radial-gradient(circle, rgba(223,223,223,0) 45%, rgba(214,90,49,0.6587009803921569) 100%);`
+  document.getElementById("poolLab").style=`background: #4a515e`
  }
  });
  //----------------------------------

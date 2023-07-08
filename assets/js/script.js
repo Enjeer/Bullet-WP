@@ -1,9 +1,10 @@
-btn=document.getElementById("btner");
-btn.onclick = function(){
-  document.querySelector('form').addEventListener('submit', submitter = function(event) {
-    event.preventDefault();
+
+submitHandler=function(e){ 
+  alert('gay');
+  e.preventDefault();
+  console.log('asdasd');
     // здесь можно обрабатывать данные формы
-  var username=document.getElementById("username").value,
+var username=document.getElementById("username").value,
          datePrev=document.getElementById("date").value,table,r1,r2,
          time=document.getElementById("customSelect-time").value,
          rad1=document.getElementById("pool"),
@@ -12,14 +13,6 @@ btn.onclick = function(){
          r1=rad1.checked,r2=rad2.checked;
          var base_url = window.location.origin;  
  
-     nameVer=function(){
-       if(username==""){
-         return username ='none';
-       }else{
-         return secName=username;
-       }
-     }
- 
      timeVer=function(){
        if(time==""){
          return time='none';
@@ -27,14 +20,6 @@ btn.onclick = function(){
          return secTime=time;
        }
      }
- 
-     dateVer=function(){
-       if(date==""){
-         return date='none';
-       }else{
-         return secDate=date;
-       }
-     }   
  
      getTable=function(){
          if(r1==true){
@@ -52,19 +37,15 @@ btn.onclick = function(){
           return duration;
          }
      }
-     
+
      run=function(){
      const now=new Date(moment());
      date = new Date(datePrev);
-       if(username!='none'){
-          if(table!=='none'){
              if(date!='none'&&(date.getFullYear()>=now.getFullYear()&&(date.getMonth()==now.getMonth()&&date.getDate()>=now.getDate())||date.getMonth()>now.getMonth())){
                 if(time!='none'){
                   if(duration!='none'){
-            
                     postSend(username, table, time, date, duration); 
-                    console.log(table); console.log(time);
-
+                    console.log('asd');
                    }else{
                      alert(_dur);
                    }
@@ -74,24 +55,14 @@ btn.onclick = function(){
              }else{
                alert(_dat);
              }
-          }else{
-           alert(_tab);
-          }
-       }else{
-         alert(_nam);
-       }
      }
  getTable();
  
- nameVer();
- 
  timeVer();
- 
- dateVer();
  
  durationVer();
  
  run();
-}); 
-document.querySelector('form').removeEventListener('submit', submitter());
-}
+}; 
+
+form=document.querySelector('form')

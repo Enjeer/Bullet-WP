@@ -30,63 +30,38 @@ postSend=(username, table, time, date, duration)=>{
   const U_StartTS=formDate.getTime();
   const U_FinTS=new Date(moment(formDate).add(duration, 'hours')).getTime(); 
   
+console.log(table + 'tt');
 
-
-
-
-
-// Открытие соединение и запрос
-check = async function(){
-
-let promise = new Promise((resolve,reject)=>{
-
-
-
-//CHECK_FUNCTION--------------------------------------------------------Check
-
-const checkformData = new FormData();
-checkformData.append('U_table', table);
-checkformData.append('U_StartTS', U_StartTS);
-checkformData.append('U_FinTS', U_FinTS);
-
-const xhr = new XMLHttpRequest();
-xhr.open('POST', './checker.php');  
-xhr.onload = function() {
-  if (xhr.status === 200) {
-    if (xhr.response === 'denied') {
-      answer += 1;
-      console.log(answer);
-    } else if (xhr.response === 'accepted') {
-      // do something
+$.ajax({
+     url : my_ajax_object.ajax_url,
+     type : 'POST',
+     action : 'checker_ajax_handler',
+     data : {
+        table : table,
+        userStart : U_StartTS,
+        userFinish : U_FinTS
+     },
+    success : function(response){
+       if(response=='isExist'){
+        console.log(nope);
+       }else{
+        console.log(yup);
+       }
+    },
+    error: function(errorThrown){
+      console.log(errorThrown);
     }
-  } else {
-    console.log('Request failed. Returned status of ' + xhr.status);
-  }
-};
-xhr.send(checkformData);
 
-
-//----------------------------------------------------------------------!Check
-
-   console.log(answer);
-  if(answer>0){
-     resolve('NO');
-  }else{
-     resolve('YES');
-  }
 });
 
+// Открытие соединения и запрос
+/*
   var telegramMessage=`ПОСТУПИЛ ЗАКАЗ.
   %0AИмя - ${username}.
   %0AВыбранный стол - ${table} .
   %0AДата и время - ${finDate} .
   %0AПродолжительность - ${duration} час(а) `;
 
-
-  let result=await promise;
-
-
-if(result!='NO'){
 
   const xhr = new XMLHttpRequest();
 
@@ -98,13 +73,7 @@ if(result!='NO'){
     }
   };
   
-  xhr.open('POST', './airSender.php', true);
+  xhr.open('POST', '/wp-content/themes/Injeer/airSender.php', true);
   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  xhr.send(`action=airSender&Table=${table}&Name=${username}&ST=${finDate}&Duration=${end_duration}`);
-
-    }else{
-    alert(`Время занято`);
+  xhr.send(`action=airSender&Table=${table}&Name=${username}&ST=${finDate}&Duration=${end_duration}`);*/
   };
-}
-check();
-}

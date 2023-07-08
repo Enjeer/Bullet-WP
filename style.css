@@ -1,16 +1,16 @@
 /*
 Theme Name: Injeer
 Theme URI:
-Description: checker fix; airt/.php
+Description: ajax
 Author: Alex
 Author URI:
-Version: 3.6.2.1
+Version: 4.7.9.2.1.03
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom, theme, WordPress
 */
 body{
-    background: whitesmoke;
+    background: #eeeeee;
 }
 @media(orientation: landscape){
 div.container-fluid{
@@ -23,7 +23,7 @@ div.nav-container{
     padding-top:0.4%;
     padding-left:0.7%;
     height:6%;
-    background: whitesmoke;
+    background: #eeeeee;
     width:100%;
 }
 a.brand{
@@ -32,11 +32,11 @@ a.brand{
     position: sticky;
 }
 a.brand:hover{
-    color:rgba(255, 156, 8, 0.801);
+    color:#d65a31;
     text-decoration: none;
 }
 a.brand:active{
-    color: #b47413;
+    color: #da5428;
 }
 button.btn-f{
     border: solid 0.2vw rgba(161, 161, 161, 0.932);
@@ -48,16 +48,16 @@ button.btn-f{
     float:right;
 }
 button.btn-f:hover{
-    border: solid 0.2vw rgba(255, 156, 8, 0.801);
-    color:rgba(255, 156, 8, 0.801);
+    border: solid 0.2vw #fc6736;
+    color:#fc6736;
 }
 div.POOL{
-    background: #4d0415;
+    background: #393f49;
     height:24%;
     max-width:100%;
 }
 div.PIRA{
-    background: #187878;
+    background: #222831;
     height:0%;
     max-width:100%;
 }
@@ -86,7 +86,7 @@ button.btn-pool{
     color:whitesmoke;
     font-weight: 600;
     letter-spacing: 0.03vw;
-    background: #960c4c;
+    background: #d65a31;
     border-radius: 0.3vw;
     height:7.5%;
     text-align: center;
@@ -96,15 +96,15 @@ button.btn-pool{
     bottom: 10%;
 }
 button.btn-pool:hover{
-    background: #4d0415;
+    background: #fc6736;
     color:rgb(197, 197, 197);
 }
 button.btn-pool:active{
-    background: #2b020c;
+    background: #da5428;
     color:rgb(197, 197, 197);
 }
 button.btn-pool:focus{
-    background: #4d0415;
+    background: #a34424;
     color:rgb(197, 197, 197);
 }
 button.btn-piramid{
@@ -113,7 +113,7 @@ button.btn-piramid{
     color:whitesmoke;
     font-weight: 600;
     letter-spacing: 0.03vw;
-    background: #18b999;
+    background: #d65a31;
     border-radius: 0.3vw;
     height:7.5%;
     text-align: center;
@@ -123,18 +123,18 @@ button.btn-piramid{
     bottom: 10%;
 }
 button.btn-piramid:hover{
-    background: #187878;
+    background: #fc6736;
     color:rgb(197, 197, 197);
     outline: 0;
 }
 button.btn-piramid:active{
-    background: #095046;
+    background: #da5428;
     color:rgb(197, 197, 197);
     outline: 0;
     box-shadow: 0;
 }
 button.btn-piramid:focus{
-    background: #187878;
+    background: #a34424;
     color:rgb(197, 197, 197);
     outline: 0;
     box-shadow: 0;
@@ -155,7 +155,7 @@ div.time1{
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color:  #b9b9b9;/* цвет индикатора */
+    background-color:  #b9b9b9; /* цвет индикатора */
   }
 form.booking{
     position: fixed;
@@ -163,61 +163,69 @@ form.booking{
     z-index: -2;
     width:0%;
     height:0%; 
-    background: rgb(241, 224, 189);
-    background: radial-gradient(circle, rgba(235,220,191,1) 0%, rgba(86,214,163,1) 0%, rgba(71,144,121,1) 100%);
+    background: #393e46;
+    border-radius: 1%;
     padding: 1%;
-    margin-left: 24%;
+    margin-left: 28%;
     top: 15%;
-    border-radius: 2%;
     padding:4%;
     visibility: hidden;
  }
 label.tab-pool{
-    border:solid 0.6vh rgba(5, 85, 18, 0.329); 
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(27,205,104,0) 49%, rgba(5, 85, 18, 0.329) 100%);
+    border:solid 0.4vh #40454e; 
+    border-radius: 3%;
+    background: #4d535e;
     margin-right: 3%;
 }
 label.tab-pira{
-    border:solid 0.6vh rgba(5, 85, 18, 0.329); 
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(27,205,104,0) 49%, rgba(5, 85, 18, 0.329) 100%);
+    border:solid 0.4vh #40454e; 
+    border-radius: 3%;
+    background: #4d535e;
 }
 select.form-control{
-    background: rgba(5, 85, 18, 0.329);
+    background: #4d535e;
     height:5vh;
     font-size: 1.8vh;
-    color:rgb(215, 250, 236);
+    color:rgb(250, 225, 215);
     border: 0;
 }
 select.form-control:hover{
-    background: rgba(3, 56, 12, 0.377);
+    background: #515864;
+    color:rgb(250, 225, 215);
 }
 select.form-control:active{
     outline: none;
-    background: rgba(12, 82, 23, 0.377);
+    background: #7c8594;
+    color:rgb(231, 207, 197);
 }
 select.form-control:focus{
     outline: none;
-    background: rgba(12, 82, 23, 0.377);
+    background: #4a505a;
+    color:rgb(250, 225, 215);
 }
 input.form-control{
-    background: rgba(5, 85, 18, 0.329);
+    background: #4d535e;
     height:5vh;
     font-size: 1.8vh;
-    color:rgb(215, 250, 236);
+    color:rgb(250, 225, 215);
     border: 0;
 }
+input[username]{
+    color:rgb(250, 225, 215);
+}
 input.form-control:hover{
-    background: rgba(3, 56, 12, 0.377);
+    background: #515864;
+    color:rgb(250, 225, 215);
 }
 input.form-control:active{
     outline: none;
-    background: rgba(12, 82, 23, 0.377);
+    background: #7c8594;
+    color:rgb(250, 225, 215);
 }
 input.form-control:focus{
     outline: none;
-    background: rgba(12, 82, 23, 0.377);
+    background: #4a505a;
+    color:rgb(250, 225, 215);
 }
 div.form-group{
     width: 100%;
@@ -235,22 +243,20 @@ div.input-group{
     background: 0;
 }
 label.btn-custom:hover{
-    background: radial-gradient(circle, rgba(17, 97, 17, 0.253) 0%, rgba(23, 124, 20, 0.356) 40%, rgba(3, 56, 12, 0.377));
-}
-button.btn-close{
-    color:rgb(227, 255, 208);
-    width:fit-content;
-    background: rgba(12, 0, 0, 0);
+    background: #414752;
+    color:rgb(250, 225, 215);
 }
 div.back{
-    background: rgba(19, 71, 15, 0.438);
-    border-radius: 3%; 
+    background: #393e46;
+    border: solid 10px #222831;
+    visibility: visible;
     width:93%; 
     height:auto; 
     position: absolute; 
     z-index: -1; 
     bottom:4%;
     left:3.5%;
+    border-radius: 1%;
     top:4%;
 }
 input.btn-val{
@@ -258,25 +264,56 @@ input.btn-val{
     margin-top: 2%;
     width:40%;
     height:5vh;
+    font-weight: 800;
     font-size: 1.8vh;
-    background: rgba(5, 85, 18, 0.329);
-    border: none;
+    background: #393e46;
+    border: solid 0.4vh #d65a31;
+    border-radius: 5%;
+    color:#d65a31;
 }
 input.btn-val:hover{
-    background: rgba(3, 56, 12, 0.377);
-    border: none;
+    border:solid 0.4vh #fc6736;
+    background: #393e46;
+    outline: none;
+    color:#fc6736;
 }
 input.btn-val:active{
+    border:solid 0.4vh #da5428;
+    z-index: 7;
+    background: #393e46;
     outline: none;
-    background: rgba(12, 82, 23, 0.377);
+    color:#da5428;
 }
 input.btn-val:focus{
+    border:solid 0.4vh #a34424;
+    background: #393e46;
     outline: none;
-    background: rgba(12, 82, 23, 0.377);
+    color:#a34424;
+}
+input.btn-close{
+    font-size:56%;
+    margin-bottom: 2vh;
+    width: fit-content;
+    border: solid 0.5vh #4d535e;
+    background: none;
+    color: #c2c8d4;
+    border-radius: 5%;
+    font-weight: 800;
+    outline: none;
+}
+input.btn-close:hover{
+    border:solid 0.5vh #414752;
+    color:#c2c8d4;    
+    outline: none;
+}
+input.btn-close:active{
+    border: solid 0.5vh #4a515e;
+    color:#c2c8d4;    
+    outline: none;
 }
 p.h2{
     font-size: 3vh;
-    color:rgb(215, 250, 236);
+    color:#eeeeee;
 }
 img.image-pira{
     display: block;
